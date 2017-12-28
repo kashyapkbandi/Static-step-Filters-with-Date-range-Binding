@@ -1,0 +1,905 @@
+{
+    "label": "Case #17912831 - issue replication dashboard",
+    "mobileDisabled": false,
+    "state": {
+        "dataSourceLinks": [],
+        "filters": [],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 12,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "18484f75-cea3-431d-a5e9-7876af1bd400",
+                        "widgets": [
+                            {
+                                "row": 1,
+                                "column": 7,
+                                "rowspan": 4,
+                                "colspan": 5,
+                                "name": "chart_1",
+                                "widgetStyle": {}
+                            },
+                            {
+                                "row": 1,
+                                "column": 0,
+                                "rowspan": 9,
+                                "colspan": 5,
+                                "name": "chart_3",
+                                "widgetStyle": {}
+                            },
+                            {
+                                "row": 0,
+                                "column": 0,
+                                "rowspan": 1,
+                                "colspan": 5,
+                                "name": "pillbox_1",
+                                "widgetStyle": {}
+                            },
+                            {
+                                "row": 0,
+                                "column": 7,
+                                "rowspan": 1,
+                                "colspan": 5,
+                                "name": "text_1",
+                                "widgetStyle": {}
+                            },
+                            {
+                                "row": 5,
+                                "column": 7,
+                                "rowspan": 1,
+                                "colspan": 5,
+                                "name": "text_2",
+                                "widgetStyle": {}
+                            },
+                            {
+                                "row": 6,
+                                "column": 7,
+                                "rowspan": 4,
+                                "colspan": 5,
+                                "name": "chart_2",
+                                "widgetStyle": {}
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "normal",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "#F2F6FA",
+                    "cellSpacingX": 8,
+                    "cellSpacingY": 8,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "Amount_3": {
+                "type": "aggregateflex",
+                "query": {
+                    "measures": [
+                        [
+                            "sum",
+                            "Amount"
+                        ]
+                    ],
+                    "filters": [
+                        [
+                            "Close Date",
+                            [
+                                [
+                                    [
+                                        "year",
+                                        -1
+                                    ],
+                                    [
+                                        "year",
+                                        0
+                                    ]
+                                ]
+                            ],
+                            ">=<="
+                        ]
+                    ]
+                },
+                "visualizationParameters": {
+                    "options": {},
+                    "type": "chart",
+                    "parameters": {
+                        "visualizationType": "hbar",
+                        "autoFitMode": "none",
+                        "theme": "wave",
+                        "title": {
+                            "label": "",
+                            "fontSize": 14,
+                            "subtitleLabel": "",
+                            "subtitleFontSize": 11,
+                            "align": "center"
+                        },
+                        "showValues": true,
+                        "axisMode": "multi",
+                        "binValues": false,
+                        "bins": {
+                            "breakpoints": {
+                                "low": 0,
+                                "high": 100
+                            },
+                            "bands": {
+                                "low": {
+                                    "label": "",
+                                    "color": "#B22222"
+                                },
+                                "medium": {
+                                    "label": "",
+                                    "color": "#ffa500"
+                                },
+                                "high": {
+                                    "label": "",
+                                    "color": "#008000"
+                                }
+                            }
+                        },
+                        "dimensionAxis": {
+                            "showAxis": true,
+                            "showTitle": true,
+                            "title": "",
+                            "customSize": "auto",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "column": "",
+                                    "fit": "cover",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "legend": {
+                            "show": true,
+                            "showHeader": true,
+                            "inside": false,
+                            "position": "right-top",
+                            "customSize": "auto"
+                        },
+                        "tooltip": {
+                            "customizeTooltip": false,
+                            "showDimensions": true,
+                            "dimensions": "",
+                            "showMeasures": true,
+                            "measures": "",
+                            "showPercentage": true,
+                            "showBinLabel": true
+                        },
+                        "trellis": {
+                            "enable": false,
+                            "showGridLines": true,
+                            "flipLabels": false,
+                            "type": "x",
+                            "chartsPerLine": 4,
+                            "size": [
+                                100,
+                                100
+                            ]
+                        }
+                    },
+                    "visualizationType": "hbar"
+                },
+                "datasets": [
+                    {
+                        "id": "0Fb7F000000CgXaSAK",
+                        "name": "Opportunities",
+                        "label": "Opportunities",
+                        "url": "/services/data/v41.0/wave/datasets/0Fb7F000000CgXaSAK"
+                    }
+                ],
+                "useGlobal": true,
+                "isGlobal": false,
+                "broadcastFacet": true,
+                "receiveFacet": true,
+                "selectMode": "single",
+                "label": "Amount_3"
+            },
+            "Static_MTD_YTD_1": {
+                "numbers": [],
+                "strings": [],
+                "groups": [],
+                "broadcastFacet": true,
+                "selectMode": "single",
+                "datasets": [],
+                "dimensions": [],
+                "type": "staticflex",
+                "label": "Static MTD_YTD",
+                "values": [
+                    {
+                        "display": "MTD",
+                        "value": [
+                            "Close Date",
+                            [
+                                [
+                                    [
+                                        "month",
+                                        -1
+                                    ],
+                                    [
+                                        "month",
+                                        0
+                                    ]
+                                ]
+                            ],
+                            ">=<="
+                        ]
+                    },
+                    {
+                        "display": "YTD",
+                        "value": [
+                            "Close Date",
+                            [
+                                [
+                                    [
+                                        "year",
+                                        -1
+                                    ],
+                                    [
+                                        "year",
+                                        0
+                                    ]
+                                ]
+                            ],
+                            ">=<="
+                        ]
+                    }
+                ],
+                "start": {
+                    "display": [
+                        "YTD"
+                    ]
+                }
+            },
+            "Amount_2": {
+                "type": "aggregateflex",
+                "query": {
+                    "measures": [
+                        [
+                            "sum",
+                            "Amount"
+                        ]
+                    ],
+                    "filters": "{{column(Static_MTD_YTD_1.selection, [\"value\"]).asObject()}}"
+                },
+                "visualizationParameters": {
+                    "options": {},
+                    "type": "chart",
+                    "parameters": {
+                        "visualizationType": "hbar",
+                        "autoFitMode": "none",
+                        "theme": "wave",
+                        "title": {
+                            "label": "",
+                            "fontSize": 14,
+                            "subtitleLabel": "",
+                            "subtitleFontSize": 11,
+                            "align": "center"
+                        },
+                        "showValues": true,
+                        "axisMode": "multi",
+                        "binValues": false,
+                        "bins": {
+                            "breakpoints": {
+                                "low": 0,
+                                "high": 100
+                            },
+                            "bands": {
+                                "low": {
+                                    "label": "",
+                                    "color": "#B22222"
+                                },
+                                "medium": {
+                                    "label": "",
+                                    "color": "#ffa500"
+                                },
+                                "high": {
+                                    "label": "",
+                                    "color": "#008000"
+                                }
+                            }
+                        },
+                        "dimensionAxis": {
+                            "showAxis": true,
+                            "showTitle": true,
+                            "title": "",
+                            "customSize": "auto",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "column": "",
+                                    "fit": "cover",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "legend": {
+                            "show": true,
+                            "showHeader": true,
+                            "inside": false,
+                            "position": "right-top",
+                            "customSize": "auto"
+                        },
+                        "tooltip": {
+                            "customizeTooltip": false,
+                            "showDimensions": true,
+                            "dimensions": "",
+                            "showMeasures": true,
+                            "measures": "",
+                            "showPercentage": true,
+                            "showBinLabel": true
+                        },
+                        "trellis": {
+                            "enable": false,
+                            "showGridLines": true,
+                            "flipLabels": false,
+                            "type": "x",
+                            "chartsPerLine": 4,
+                            "size": [
+                                100,
+                                100
+                            ]
+                        }
+                    }
+                },
+                "datasets": [
+                    {
+                        "id": "0Fb7F000000CgXaSAK",
+                        "name": "Opportunities",
+                        "label": "Opportunities",
+                        "url": "/services/data/v41.0/wave/datasets/0Fb7F000000CgXaSAK"
+                    }
+                ],
+                "useGlobal": true,
+                "isGlobal": false,
+                "broadcastFacet": true,
+                "receiveFacet": true,
+                "selectMode": "single"
+            },
+            "Amount_1": {
+                "type": "aggregateflex",
+                "query": {
+                    "measures": [
+                        [
+                            "sum",
+                            "Amount"
+                        ]
+                    ],
+                    "filters": [
+                        [
+                            "Close Date",
+                            [
+                                [
+                                    [
+                                        "month",
+                                        -1
+                                    ],
+                                    [
+                                        "month",
+                                        0
+                                    ]
+                                ]
+                            ],
+                            ">=<="
+                        ]
+                    ]
+                },
+                "visualizationParameters": {
+                    "options": {},
+                    "type": "chart",
+                    "parameters": {
+                        "visualizationType": "hbar",
+                        "autoFitMode": "none",
+                        "theme": "wave",
+                        "title": {
+                            "label": "",
+                            "fontSize": 14,
+                            "subtitleLabel": "",
+                            "subtitleFontSize": 11,
+                            "align": "center"
+                        },
+                        "showValues": true,
+                        "axisMode": "multi",
+                        "binValues": false,
+                        "bins": {
+                            "breakpoints": {
+                                "low": 0,
+                                "high": 100
+                            },
+                            "bands": {
+                                "low": {
+                                    "label": "",
+                                    "color": "#B22222"
+                                },
+                                "medium": {
+                                    "label": "",
+                                    "color": "#ffa500"
+                                },
+                                "high": {
+                                    "label": "",
+                                    "color": "#008000"
+                                }
+                            }
+                        },
+                        "dimensionAxis": {
+                            "showAxis": true,
+                            "showTitle": true,
+                            "title": "",
+                            "customSize": "auto",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "column": "",
+                                    "fit": "cover",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "legend": {
+                            "show": true,
+                            "showHeader": true,
+                            "inside": false,
+                            "position": "right-top",
+                            "customSize": "auto"
+                        },
+                        "tooltip": {
+                            "customizeTooltip": false,
+                            "showDimensions": true,
+                            "dimensions": "",
+                            "showMeasures": true,
+                            "measures": "",
+                            "showPercentage": true,
+                            "showBinLabel": true
+                        },
+                        "trellis": {
+                            "enable": false,
+                            "showGridLines": true,
+                            "flipLabels": false,
+                            "type": "x",
+                            "chartsPerLine": 4,
+                            "size": [
+                                100,
+                                100
+                            ]
+                        }
+                    }
+                },
+                "datasets": [
+                    {
+                        "id": "0Fb7F000000CgXaSAK",
+                        "name": "Opportunities",
+                        "label": "Opportunities",
+                        "url": "/services/data/v41.0/wave/datasets/0Fb7F000000CgXaSAK"
+                    }
+                ],
+                "useGlobal": true,
+                "isGlobal": false,
+                "broadcastFacet": true,
+                "receiveFacet": true,
+                "selectMode": "single"
+            },
+            "Static_MTD_YTD_Value_1": {
+                "numbers": [],
+                "strings": [],
+                "groups": [],
+                "broadcastFacet": true,
+                "selectMode": "single",
+                "datasets": [],
+                "dimensions": [],
+                "type": "staticflex",
+                "label": "Static MTD YTD Values",
+                "values": [
+                    {
+                        "display": "MTD",
+                        "value": "\"[[[\\\"month\\\",-1],[\\\"month\\\",0]]]\""
+                    },
+                    {
+                        "display": "YTD",
+                        "value": "\"[[[\\\"year\\\",-1],[\\\"year\\\",0]]]\""
+                    }
+                ]
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#E6ECF2",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "chart_1": {
+                "type": "chart",
+                "parameters": {
+                    "visualizationType": "hbar",
+                    "autoFitMode": "none",
+                    "theme": "wave",
+                    "title": {
+                        "label": "",
+                        "fontSize": 14,
+                        "subtitleLabel": "",
+                        "subtitleFontSize": 11,
+                        "align": "center"
+                    },
+                    "showValues": true,
+                    "axisMode": "multi",
+                    "binValues": false,
+                    "bins": {
+                        "breakpoints": {
+                            "low": 0,
+                            "high": 100
+                        },
+                        "bands": {
+                            "low": {
+                                "label": "",
+                                "color": "#B22222"
+                            },
+                            "medium": {
+                                "label": "",
+                                "color": "#ffa500"
+                            },
+                            "high": {
+                                "label": "",
+                                "color": "#008000"
+                            }
+                        }
+                    },
+                    "dimensionAxis": {
+                        "showAxis": true,
+                        "showTitle": true,
+                        "title": "",
+                        "customSize": "auto",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "column": "",
+                                "fit": "cover",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "legend": {
+                        "show": true,
+                        "showHeader": true,
+                        "inside": false,
+                        "position": "right-top",
+                        "customSize": "auto"
+                    },
+                    "tooltip": {
+                        "customizeTooltip": false,
+                        "showDimensions": true,
+                        "dimensions": "",
+                        "showMeasures": true,
+                        "measures": "",
+                        "showPercentage": true,
+                        "showBinLabel": true
+                    },
+                    "trellis": {
+                        "enable": false,
+                        "showGridLines": true,
+                        "flipLabels": false,
+                        "type": "x",
+                        "chartsPerLine": 4,
+                        "size": [
+                            100,
+                            100
+                        ]
+                    },
+                    "step": "Amount_1"
+                }
+            },
+            "chart_3": {
+                "type": "chart",
+                "parameters": {
+                    "visualizationType": "hbar",
+                    "title": {
+                        "label": "",
+                        "fontSize": 14,
+                        "subtitleLabel": "",
+                        "subtitleFontSize": 11,
+                        "align": "center"
+                    },
+                    "theme": "wave",
+                    "showValues": true,
+                    "axisMode": "multi",
+                    "autoFitMode": "none",
+                    "binValues": false,
+                    "bins": {
+                        "breakpoints": {
+                            "low": 0,
+                            "high": 100
+                        },
+                        "bands": {
+                            "low": {
+                                "label": "",
+                                "color": "#B22222"
+                            },
+                            "medium": {
+                                "label": "",
+                                "color": "#ffa500"
+                            },
+                            "high": {
+                                "label": "",
+                                "color": "#008000"
+                            }
+                        }
+                    },
+                    "dimensionAxis": {
+                        "showAxis": true,
+                        "showTitle": true,
+                        "title": "",
+                        "customSize": "auto",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "column": "",
+                                "fit": "cover",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "legend": {
+                        "show": true,
+                        "showHeader": true,
+                        "inside": false,
+                        "position": "right-top",
+                        "customSize": "auto"
+                    },
+                    "tooltip": {
+                        "customizeTooltip": false,
+                        "showDimensions": true,
+                        "dimensions": "",
+                        "showMeasures": true,
+                        "measures": "",
+                        "showPercentage": true,
+                        "showBinLabel": true
+                    },
+                    "trellis": {
+                        "enable": false,
+                        "showGridLines": true,
+                        "flipLabels": false,
+                        "type": "x",
+                        "chartsPerLine": 4,
+                        "size": [
+                            100,
+                            100
+                        ]
+                    },
+                    "exploreLink": true,
+                    "step": "Amount_2"
+                }
+            },
+            "pillbox_1": {
+                "type": "pillbox",
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": false,
+                    "step": "Static_MTD_YTD_1"
+                }
+            },
+            "text_1": {
+                "type": "text",
+                "parameters": {
+                    "text": "Last Month to This Month \n",
+                    "textAlignment": "center",
+                    "textColor": "#091A3E",
+                    "fontSize": 20
+                }
+            },
+            "text_2": {
+                "type": "text",
+                "parameters": {
+                    "text": "Last Year to Current Year",
+                    "textAlignment": "center",
+                    "textColor": "#091A3E",
+                    "fontSize": 20
+                }
+            },
+            "chart_2": {
+                "type": "chart",
+                "parameters": {
+                    "visualizationType": "hbar",
+                    "autoFitMode": "none",
+                    "theme": "wave",
+                    "title": {
+                        "label": "",
+                        "fontSize": 14,
+                        "subtitleLabel": "",
+                        "subtitleFontSize": 11,
+                        "align": "center"
+                    },
+                    "showValues": true,
+                    "axisMode": "multi",
+                    "binValues": false,
+                    "bins": {
+                        "breakpoints": {
+                            "low": 0,
+                            "high": 100
+                        },
+                        "bands": {
+                            "low": {
+                                "label": "",
+                                "color": "#B22222"
+                            },
+                            "medium": {
+                                "label": "",
+                                "color": "#ffa500"
+                            },
+                            "high": {
+                                "label": "",
+                                "color": "#008000"
+                            }
+                        }
+                    },
+                    "dimensionAxis": {
+                        "showAxis": true,
+                        "showTitle": true,
+                        "title": "",
+                        "customSize": "auto",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "column": "",
+                                "fit": "cover",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "legend": {
+                        "show": true,
+                        "showHeader": true,
+                        "inside": false,
+                        "position": "right-top",
+                        "customSize": "auto"
+                    },
+                    "tooltip": {
+                        "customizeTooltip": false,
+                        "showDimensions": true,
+                        "dimensions": "",
+                        "showMeasures": true,
+                        "measures": "",
+                        "showPercentage": true,
+                        "showBinLabel": true
+                    },
+                    "trellis": {
+                        "enable": false,
+                        "showGridLines": true,
+                        "flipLabels": false,
+                        "type": "x",
+                        "chartsPerLine": 4,
+                        "size": [
+                            100,
+                            100
+                        ]
+                    },
+                    "step": "Amount_3",
+                    "exploreLink": true
+                }
+            }
+        }
+    },
+    "datasets": [
+        {
+            "name": "Opportunities",
+            "url": "/services/data/v41.0/wave/datasets/0Fb7F000000CgXaSAK",
+            "id": "0Fb7F000000CgXaSAK"
+        }
+    ]
+}
