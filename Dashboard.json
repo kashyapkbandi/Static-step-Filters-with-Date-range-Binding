@@ -1,6 +1,7 @@
 {
-    "label": "Case #17912831 - issue replication dashboard",
+    "label": "Static Step with date range filters + Binding to a chart",
     "mobileDisabled": false,
+    "description": "1)Current Month to 1 month ago \n2)Current Year to 1 Year ago \n3)Current Quarter to 1 Quarter ago",
     "state": {
         "dataSourceLinks": [],
         "filters": [],
@@ -60,6 +61,22 @@
                                 "colspan": 5,
                                 "name": "chart_2",
                                 "widgetStyle": {}
+                            },
+                            {
+                                "row": 11,
+                                "column": 7,
+                                "rowspan": 4,
+                                "colspan": 5,
+                                "name": "chart_4",
+                                "widgetStyle": {}
+                            },
+                            {
+                                "row": 10,
+                                "column": 7,
+                                "rowspan": 1,
+                                "colspan": 5,
+                                "name": "text_3",
+                                "widgetStyle": {}
                             }
                         ]
                     }
@@ -80,6 +97,148 @@
         ],
         "layouts": [],
         "steps": {
+            "Amount_3_1": {
+                "type": "aggregateflex",
+                "query": {
+                    "measures": [
+                        [
+                            "sum",
+                            "Amount"
+                        ]
+                    ],
+                    "filters": [
+                        [
+                            "Close Date",
+                            [
+                                [
+                                    [
+                                        "quarter",
+                                        -1
+                                    ],
+                                    [
+                                        "quarter",
+                                        0
+                                    ]
+                                ]
+                            ],
+                            ">=<="
+                        ]
+                    ]
+                },
+                "visualizationParameters": {
+                    "options": {},
+                    "type": "chart",
+                    "parameters": {
+                        "visualizationType": "hbar",
+                        "autoFitMode": "none",
+                        "theme": "wave",
+                        "title": {
+                            "label": "",
+                            "fontSize": 14,
+                            "subtitleLabel": "",
+                            "subtitleFontSize": 11,
+                            "align": "center"
+                        },
+                        "showValues": true,
+                        "axisMode": "multi",
+                        "binValues": false,
+                        "bins": {
+                            "breakpoints": {
+                                "low": 0,
+                                "high": 100
+                            },
+                            "bands": {
+                                "low": {
+                                    "label": "",
+                                    "color": "#B22222"
+                                },
+                                "medium": {
+                                    "label": "",
+                                    "color": "#ffa500"
+                                },
+                                "high": {
+                                    "label": "",
+                                    "color": "#008000"
+                                }
+                            }
+                        },
+                        "dimensionAxis": {
+                            "showAxis": true,
+                            "showTitle": true,
+                            "title": "",
+                            "customSize": "auto",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "column": "",
+                                    "fit": "cover",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showAxis": true,
+                            "customDomain": {
+                                "showDomain": false
+                            },
+                            "showTitle": true,
+                            "title": ""
+                        },
+                        "legend": {
+                            "show": true,
+                            "showHeader": true,
+                            "inside": false,
+                            "position": "right-top",
+                            "customSize": "auto"
+                        },
+                        "tooltip": {
+                            "customizeTooltip": false,
+                            "showDimensions": true,
+                            "dimensions": "",
+                            "showMeasures": true,
+                            "measures": "",
+                            "showPercentage": true,
+                            "showBinLabel": true
+                        },
+                        "trellis": {
+                            "enable": false,
+                            "showGridLines": true,
+                            "flipLabels": false,
+                            "type": "x",
+                            "chartsPerLine": 4,
+                            "size": [
+                                100,
+                                100
+                            ]
+                        }
+                    },
+                    "visualizationType": "hbar"
+                },
+                "datasets": [
+                    {
+                        "id": "0Fb7F000000CgXaSAK",
+                        "name": "Opportunities",
+                        "label": "Opportunities",
+                        "url": "/services/data/v41.0/wave/datasets/0Fb7F000000CgXaSAK"
+                    }
+                ],
+                "useGlobal": true,
+                "isGlobal": false,
+                "broadcastFacet": true,
+                "receiveFacet": true,
+                "selectMode": "single",
+                "label": "Amount_3"
+            },
             "Amount_3": {
                 "type": "aggregateflex",
                 "query": {
@@ -264,6 +423,25 @@
                                     ],
                                     [
                                         "year",
+                                        0
+                                    ]
+                                ]
+                            ],
+                            ">=<="
+                        ]
+                    },
+                    {
+                        "display": "Quarter",
+                        "value": [
+                            "Close Date",
+                            [
+                                [
+                                    [
+                                        "quarter",
+                                        -1
+                                    ],
+                                    [
+                                        "quarter",
                                         0
                                     ]
                                 ]
@@ -540,27 +718,6 @@
                 "broadcastFacet": true,
                 "receiveFacet": true,
                 "selectMode": "single"
-            },
-            "Static_MTD_YTD_Value_1": {
-                "numbers": [],
-                "strings": [],
-                "groups": [],
-                "broadcastFacet": true,
-                "selectMode": "single",
-                "datasets": [],
-                "dimensions": [],
-                "type": "staticflex",
-                "label": "Static MTD YTD Values",
-                "values": [
-                    {
-                        "display": "MTD",
-                        "value": "\"[[[\\\"month\\\",-1],[\\\"month\\\",0]]]\""
-                    },
-                    {
-                        "display": "YTD",
-                        "value": "\"[[[\\\"year\\\",-1],[\\\"year\\\",0]]]\""
-                    }
-                ]
             }
         },
         "widgetStyle": {
@@ -891,6 +1048,114 @@
                     },
                     "step": "Amount_3",
                     "exploreLink": true
+                }
+            },
+            "chart_4": {
+                "type": "chart",
+                "parameters": {
+                    "visualizationType": "hbar",
+                    "autoFitMode": "none",
+                    "theme": "wave",
+                    "title": {
+                        "label": "",
+                        "fontSize": 14,
+                        "subtitleLabel": "",
+                        "subtitleFontSize": 11,
+                        "align": "center"
+                    },
+                    "showValues": true,
+                    "axisMode": "multi",
+                    "binValues": false,
+                    "bins": {
+                        "breakpoints": {
+                            "low": 0,
+                            "high": 100
+                        },
+                        "bands": {
+                            "low": {
+                                "label": "",
+                                "color": "#B22222"
+                            },
+                            "medium": {
+                                "label": "",
+                                "color": "#ffa500"
+                            },
+                            "high": {
+                                "label": "",
+                                "color": "#008000"
+                            }
+                        }
+                    },
+                    "dimensionAxis": {
+                        "showAxis": true,
+                        "showTitle": true,
+                        "title": "",
+                        "customSize": "auto",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "column": "",
+                                "fit": "cover",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showAxis": true,
+                        "customDomain": {
+                            "showDomain": false
+                        },
+                        "showTitle": true,
+                        "title": ""
+                    },
+                    "legend": {
+                        "show": true,
+                        "showHeader": true,
+                        "inside": false,
+                        "position": "right-top",
+                        "customSize": "auto"
+                    },
+                    "tooltip": {
+                        "customizeTooltip": false,
+                        "showDimensions": true,
+                        "dimensions": "",
+                        "showMeasures": true,
+                        "measures": "",
+                        "showPercentage": true,
+                        "showBinLabel": true
+                    },
+                    "trellis": {
+                        "enable": false,
+                        "showGridLines": true,
+                        "flipLabels": false,
+                        "type": "x",
+                        "chartsPerLine": 4,
+                        "size": [
+                            100,
+                            100
+                        ]
+                    },
+                    "step": "Amount_3_1",
+                    "exploreLink": true
+                }
+            },
+            "text_3": {
+                "type": "text",
+                "parameters": {
+                    "text": "Last Quarter to This Quarter",
+                    "textAlignment": "center",
+                    "textColor": "#091A3E",
+                    "fontSize": 20
                 }
             }
         }
